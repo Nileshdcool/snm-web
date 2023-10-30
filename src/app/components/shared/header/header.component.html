@@ -1,0 +1,69 @@
+<div class="top-header-section">
+  <header class="theme-main-menu clearfix" [ngClass]="{
+      'dark-color':isLogin == false
+    }">
+    <div class="logo"><a routerLink="/home"><img class="header_logo" src='../../../../assets/images/logo/logo-with-name-i10-_Converted_-_2_.svg' alt=""></a></div>
+
+    <div class="right-widget">
+      <ul class="clearfix">
+        <li class="cart-button"><a routerLink="/payment"><i class="flaticon-credit-card"></i></a></li>
+        <!-- <li class="search-option">
+          <div class="dropdown">
+            <button type="button" class="dropdown-button" data-toggle="dropdown"><i
+                class="flaticon-002-search"></i></button>
+            <form action="#" class="dropdown-menu dropdown-menu-right">
+              <input type="text" Placeholder="Enter Your Search">
+              <button><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+
+
+    <div class="menu-wrapper">
+      <nav id="mega-menu-holder" class="clearfix">
+        <ul class="clearfix">
+          <li><a routerLink="/home" class="nav-item nav-link active">Home</a></li>
+          <li><a routerLink="/founder" class="nav-item nav-link active">Founder</a></li>
+          <li><a routerLink="/faculty" class="nav-item nav-link active">Faculty</a></li>
+          <!-- <li><a routerLink="/event" class="nav-item nav-link active">Events</a></li> -->
+          <!-- <li>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle anchor-style" data-toggle="dropdown">Our
+                Classes</a>
+              <div class="dropdown-menu">
+                <a routerLink="/our-class" class="dropdown-item">Our Class</a>
+                <a routerLink="/class-details" class="dropdown-item">Class Details</a>
+              </div>
+            </div>
+          </li> -->
+          <li>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle anchor-style" data-toggle="dropdown">About Us</a>
+              <div class="dropdown-menu">
+                <!-- <a routerLink="/about-us" class="dropdown-item">About Us</a> -->
+                <!-- <a routerLink="/syllabus" class="dropdown-item">Syllabus</a> -->
+                <a routerLink="/our-class" class="dropdown-item">Our Class</a>
+                <a routerLink="/portfolio" class="dropdown-item">Portfolio</a>
+                <!-- <a routerLink="/faq" class="dropdown-item">Faq</a> -->
+              </div>
+            </div>
+          </li>
+          <!-- <li>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle anchor-style" data-toggle="dropdown">Blog</a>
+              <div class="dropdown-menu">
+                <a routerLink="/blog" class="dropdown-item">Blog</a>
+                <a routerLink="/blog-details" class="dropdown-item">Blog details</a>
+              </div>
+            </div>
+          </li> -->
+          <li>
+            <a routerLink="/contact" class="nav-item nav-link active">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
