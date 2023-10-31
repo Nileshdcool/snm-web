@@ -27,3 +27,48 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## commands used
+
+Commands used:
+username:ec2-user
+
+sudo yum update
+sudo yum install nginx
+sudo systemctl status nginx OR sudo service nginx status
+
+#Angular -----
+
+sudo mkdir /data
+sudo mkdir /data/nginx
+sudo unzip dist.zip                                                --to unzip 
+
+/home/ec2-user/dist/accelerator_frontend    --path of source
+/data/nginx         -destination 
+
+sudo cp -R /path/to/source /path/to/destination                               
+sudo cp -R /home/ec2-user/dist/accelerator_frontend /data/nginx
+
+#After copying
+/data/nginx/accelerator_frontend     ---webroot
+
+#Nginx Web server Configuration -----
+/etc/nginx/                  --Default nginx directory
+cd /etc/nginx/conf.d
+sudo vim config_01.conf      --Create new configuration
+
+sudo nginx -t                   Syntax Check
+sudo systemctl restart nginx    Restart nginx server
+
+---------------------------------------------------------------------------
+Nginx Basic Configuration:
+server {
+    listen 80;
+    server_name public_ip;
+
+    location / {
+        root /data/nginx/accelerator_frontend;
+        index index.html;
+        try_files $uri $uri/ /index.html;
+    }
+}
